@@ -1,11 +1,9 @@
 let player
 
-function onYouTubeIframeAPIReady() {}
-
-function createPlayer(ctrlq) {
-    if(player) 
-        player.destroy()
-
+function onYouTubeIframeAPIReady() {
+    const ctrlq = document.getElementById("youtube-audio");
+    ctrlq.onclick = toggleAudio;
+    
     player = new YT.Player('youtube-player', {
         height: '0',
         width: '0',
@@ -19,7 +17,7 @@ function createPlayer(ctrlq) {
             'onStateChange': onPlayerStateChange 
         } 
     })
-} 
+}
 
 function togglePlayButton(play) {    
     const stopImg = currentAudio.firstElementChild.firstElementChild
