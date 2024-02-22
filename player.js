@@ -7,7 +7,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player', {
         height: '0',
         width: '0',
-        videoId: ctrlq.dataset.video,
+        videoId: ctrlq.firstElementChild.dataset.video,
         playerVars: {
             autoplay: "0",
             loop: "1",
@@ -31,3 +31,5 @@ function onPlayerReady() {
     player.setPlaybackQuality("small")
     toggleAudio()
 }
+
+function onPlayerStateChange(event) {}
