@@ -1,6 +1,7 @@
 let player
 
 function onYouTubeIframeAPIReady() {
+    console.log("a")
     const ctrlq = document.getElementById("youtube-audio");
     ctrlq.onclick = toggleAudio;
     
