@@ -29,6 +29,6 @@
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   var s = document.getElementById('youtube-player');
-  s.data = urlParams.get('videoId');
+  s.dataset.video = urlParams.get('videoId');
 </script>
 </html>
