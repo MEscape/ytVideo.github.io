@@ -28,7 +28,7 @@
 <script>
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  var s = document.getElementById('thisIframe');
-  s.src = `https://www.youtube.com/embed/${urlParams.get('videoId')}?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1`;
+  var s = document.getElementById('youtube-player');
+  s.data = urlParams.get('videoId');
 </script>
 </html>
