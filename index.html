@@ -1,4 +1,5 @@
 <html>
+  <head>
   <style>
   html {
     overflow: hidden;
@@ -19,11 +20,10 @@
     padding-bottom: 100;
   }
   </style>
+    <script defer src="player.js"></script>
+  </head>
 <body>
-  <iframe
-    id="thisIframe"
-    width="100%" height="100%"
-    src="https://www.youtube.com/embed/jzD_yyEcp0M?rel=0&enablejsapi=1&playsinline=1&showInfo=0&controls=1&fullscreen=1"frameborder="0"allowfullscreen="true"></iframe>
+  <div id="youtube-audio"><img id="youtube-icon" src=""><div id="youtube-player"></div></div>
 </body>
 <script>
   const queryString = window.location.search;
